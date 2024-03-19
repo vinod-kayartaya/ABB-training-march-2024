@@ -9,4 +9,4 @@ import CustomerForm from './state-demo/CustomerForm';
 // this is a react version of the DOM element
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<CustomerForm />);
+root.render(<App />);

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import TaskList from './TaskList';
@@ -10,6 +11,13 @@ const taskData = [
 ];
 
 function App() {
+  const [tasks, setTasks] = useState(taskData);
+
+  const deleteTask = (id) => {
+    const remainingTasks = tasks.filter((t) => t.id !== id);
+    setTasks(remainingTasks);
+  };
+
   return (
     <>
       <Header authorName='Vinod' authorEmail='vinod@vinod.co' />
@@ -20,7 +28,7 @@ function App() {
         }}
       >
         <p>react is really cool</p>
-        <TaskList data={taskData} />
+        <TaskList data={tasks} deleteTask={deleteTask} />
       </div>
 
       <Footer companyName='Learn with Vinod' year={2023} />
