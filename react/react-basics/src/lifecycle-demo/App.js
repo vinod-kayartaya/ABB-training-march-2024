@@ -12,20 +12,21 @@ const imgPath =
   'https://cdn.pixabay.com/photo/2012/10/26/01/34/aircraft-63028_1280.jpg';
 
 export default class App extends Component {
-  state = { isChecked: true, currentImageIndex: 0 };
+  state = { isChecked: true, currentImageIndex: 0, timeoutId: undefined };
 
   changeHandler = ({ target: { checked } }) => {
     this.setState({ ...this.state, isChecked: checked });
   };
 
+  nextImage = () => {
+    const newCurrentImageIndex =
+      this.state.currentImageIndex === images.length - 1
+        ? 0
+        : this.state.currentImageIndex + 1;
+    this.setState({ ...this.state, currentImageIndex: newCurrentImageIndex });
+  };
+
   render() {
-    setTimeout(() => {
-      const newCurrentImageIndex =
-        this.state.currentImageIndex === images.length - 1
-          ? 0
-          : this.state.currentImageIndex + 1;
-      this.setState({ ...this.state, currentImageIndex: newCurrentImageIndex });
-    }, 2000);
     return (
       <>
         <div className='alert alert-primary'>
@@ -45,6 +46,12 @@ export default class App extends Component {
             <label className='form-check-label' htmlFor='showHideCheck'>
               Show/hide
             </label>
+          </div>
+
+          <div>
+            <button onClick={this.nextImage} className='btn btn-link'>
+              Change image
+            </button>
           </div>
 
           {this.state.isChecked && (

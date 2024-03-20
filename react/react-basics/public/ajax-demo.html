@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>List of movies with `spider` in their title</h3>
+
+    <ul id="movie_titles"></ul>
+
+    <script>
+      var url = 'https://www.omdbapi.com/?apikey=aa9e49f&s=spider';
+      var xhr = new XMLHttpRequest(); // xhr.readyState = 0
+      xhr.onreadystatechange = function () {
+        console.log('xhr.readyState changed to', xhr.readyState);
+        if (xhr.readyState === 4) {
+          var data = JSON.parse(xhr.responseText);
+          var movies = data.Search.map(movie => movie.Title )
+          var lists = '';
+          movies.forEach(title => lists += `<li>${title}</li>` )
+          document.getElementById('movie_titles').innerHTML = lists;
+        }
+      };
+
+      console.log('xhr.readyState is', xhr.readyState);
+      xhr.open('GET', url, true);
+      console.log('xhr.readyState is', xhr.readyState);
+      xhr.send();
+    </script>
+  </body>
+</html>

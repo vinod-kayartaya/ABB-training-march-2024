@@ -1,9 +1,15 @@
 import React from 'react';
 import Task from './Task';
 
-const TaskList = ({ data, deleteTask }) => {
+const TaskList = ({ data, deleteTask, toggleSingleTaskStatus, moveUpDown }) => {
   const list = data.map((t) => (
-    <Task key={t.id} task={t} deleteTask={deleteTask} />
+    <Task
+      key={t.id}
+      task={t}
+      deleteTask={deleteTask}
+      toggleSingleTaskStatus={toggleSingleTaskStatus}
+      moveUpDown={moveUpDown}
+    />
   ));
 
   if (data.length === 0) {

@@ -32,9 +32,10 @@ function App() {
     setTasks(tasksCopy);
   };
 
-  const deleteAllTasks = () => {
+  function deleteAllTasks() {
+    console.log('in deleteAllTasks, arguments is', arguments);
     setTasks([]);
-  };
+  }
 
   const deleteFinishedTasks = () => {
     const pendingTasks = tasks.filter((t) => !t.finished);
@@ -47,6 +48,33 @@ function App() {
       return t;
     });
     setTasks(newTasks);
+  };
+
+  const toggleSingleTaskStatus = (id) => {
+    const tasksCopy = [...tasks];
+    const theTask = tasksCopy.find((t) => t.id === id);
+    theTask.finished = !theTask.finished;
+    setTasks(tasksCopy);
+  };
+
+  const moveUpDown = (id, direction) => {
+    const tasksCopy = [...tasks];
+    const index = tasksCopy.findIndex((t) => t.id === id);
+    if (direction === 'up') {
+      if (index === 0) return;
+
+      const prev = tasksCopy[index - 1];
+      const curr = tasksCopy[index];
+      tasksCopy[index - 1] = curr;
+      tasksCopy[index] = prev;
+    } else {
+      if (index === tasksCopy.length - 1) return;
+      const curr = tasksCopy[index];
+      const next = tasksCopy[index + 1];
+      tasksCopy[index + 1] = curr;
+      tasksCopy[index] = next;
+    }
+    setTasks(tasksCopy);
   };
 
   const deleteTask = (id) => {
@@ -71,7 +99,12 @@ function App() {
               toggleTaskStatus={toggleTaskStatus}
               deleteFinishedTasks={deleteFinishedTasks}
             />
-            <TaskList data={tasks} deleteTask={deleteTask} />
+            <TaskList
+              moveUpDown={moveUpDown}
+              data={tasks}
+              deleteTask={deleteTask}
+              toggleSingleTaskStatus={toggleSingleTaskStatus}
+            />
           </div>
         </div>
       </div>
