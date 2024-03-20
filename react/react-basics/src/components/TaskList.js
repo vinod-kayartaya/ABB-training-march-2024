@@ -15,7 +15,7 @@ const TaskList = ({ data, deleteTask }) => {
   }
 
   return (
-    <div style={{ width: '500px' }}>
+    <div>
       <ul className='list-group'>{list}</ul>
     </div>
   );

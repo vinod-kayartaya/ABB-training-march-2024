@@ -1,0 +1,7 @@
+.app-task .app-buttons {
+    visibility: hidden;
+}
+
+.app-task:hover .app-buttons {
+    visibility: visible;
+}

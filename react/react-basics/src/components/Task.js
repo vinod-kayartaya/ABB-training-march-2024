@@ -3,14 +3,14 @@ import React from 'react';
 const Task = ({ task, deleteTask }) => {
   return (
     <>
-      <div className='list-group-item'>
+      <div className='list-group-item app-task'>
         <span
           style={{ textDecoration: task.finished ? 'line-through' : 'none' }}
         >
           {task.text}
         </span>
 
-        <div className='float-end'>
+        <div className='float-end app-buttons'>
           <button
             onClick={() => deleteTask(task.id)}
             className='btn btn-link bi bi-trash'

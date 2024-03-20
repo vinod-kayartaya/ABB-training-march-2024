@@ -3,17 +3,23 @@ import Footer from './Footer';
 import Header from './Header';
 import TaskList from './TaskList';
 import Toolbar from './Toolbar';
+import TaskForm from './TaskForm';
 
 const taskData = [
-  { id: 1, text: 'learn css basics', finished: false },
-  { id: 2, text: 'learn react basics', finished: true },
-  { id: 3, text: 'learn props in react', finished: true },
-  { id: 4, text: 'learn calling REST api', finished: false },
+  { id: 11, text: 'learn css basics', finished: false },
+  { id: 42, text: 'learn react basics', finished: true },
+  { id: 32, text: 'learn props in react', finished: true },
+  { id: 14, text: 'learn calling REST api', finished: false },
 ];
 
 function App() {
   const [tasks, setTasks] = useState(taskData);
   const [isAscending, setAscending] = useState(false);
+
+  const addTask = (text) => {
+    const id = tasks.length === 0 ? 1 : 1 + Math.max(...tasks.map((t) => t.id));
+    setTasks([...tasks, { id, text, finished: false }]);
+  };
 
   const sortTasks = () => {
     const tasksCopy = [...tasks];
@@ -51,20 +57,23 @@ function App() {
   return (
     <>
       <Header authorName='Vinod' authorEmail='vinod@vinod.co' />
-      <div
-        className='container'
-        style={{
-          minHeight: '500px',
-        }}
-      >
-        <Toolbar
-          taskCount={tasks.length}
-          sortTasks={sortTasks}
-          deleteAllTasks={deleteAllTasks}
-          toggleTaskStatus={toggleTaskStatus}
-          deleteFinishedTasks={deleteFinishedTasks}
-        />
-        <TaskList data={tasks} deleteTask={deleteTask} />
+      <div className='container'>
+        {/* .row>.col-6*2 */}
+        <div className='row'>
+          <div className='col-6'>
+            <TaskForm addTask={addTask} />
+          </div>
+          <div className='col-6'>
+            <Toolbar
+              taskCount={tasks.length}
+              sortTasks={sortTasks}
+              deleteAllTasks={deleteAllTasks}
+              toggleTaskStatus={toggleTaskStatus}
+              deleteFinishedTasks={deleteFinishedTasks}
+            />
+            <TaskList data={tasks} deleteTask={deleteTask} />
+          </div>
+        </div>
       </div>
 
       <Footer companyName='Learn with Vinod' year={2023} />
