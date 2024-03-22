@@ -1,5 +1,56 @@
-<h3>Details of the selected contact</h3>
+<h3>{{ contact | fullname }}</h3>
 
-<p>
-    {{ contact | json }}
-</p>
+<div class="row">
+  <div class="col-6">
+    <!-- table.table>tbody>tr*8>td*2 -->
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Firstname</td>
+          <td>{{ contact.firstname }}</td>
+        </tr>
+        <tr>
+          <td>Lastname</td>
+          <td>{{ contact.lastname }}</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>{{ contact.gender }}</td>
+        </tr>
+        <tr>
+          <td>Email address</td>
+          <td>{{ contact.email }}</td>
+        </tr>
+        <tr>
+          <td>Phone number</td>
+          <td>{{ contact.phone }}</td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>{{ contact.address }}</td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td>{{ contact.city }}</td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td>{{ contact.country }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button (click)="confirmAndDelete()" class="btn btn-outline-danger">
+      <i class="bi bi-trash"></i>
+      Delete
+    </button>
+  </div>
+  <div class="col-6">
+    <img
+      class="img-thumbnail"
+      [src]="contact.avatar"
+      [alt]="contact | fullname"
+      [ngStyle]="{ height: '300px' }"
+    />
+  </div>
+</div>

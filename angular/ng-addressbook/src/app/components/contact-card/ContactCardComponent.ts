@@ -17,7 +17,7 @@ export class ContactCardComponent {
 
   constructor(private service: ContactService) {}
 
-  public confirmAndDelete() {
+  deleteThisContact() {
     Swal.fire({
       title: 'Confirm',
       text: 'Sure about deletion?',
@@ -27,7 +27,7 @@ export class ContactCardComponent {
       cancelButtonText: 'No',
     }).then((result) => {
       if (result.isConfirmed) {
-        this.deleteContact();
+        deleteContact();
       }
     });
   }
@@ -36,7 +36,7 @@ export class ContactCardComponent {
       this.deleted.emit('deleted');
       Swal.fire({
         title: 'Deleted!',
-        text: 'Your contact has been deleted.',
+        text: 'Your file has been deleted.',
         icon: 'success',
       });
     });

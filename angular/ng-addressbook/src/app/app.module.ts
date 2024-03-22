@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -60,6 +61,7 @@ const routes: Routes = [
     BrowserModule, // this module does all DOM manipulation for us
     HttpClientModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [
     // generally services are added here

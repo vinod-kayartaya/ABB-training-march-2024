@@ -1,90 +1,6 @@
 {
   "contacts": [
     {
-      "id": 14,
-      "firstname": "Shell",
-      "lastname": "Marlow",
-      "gender": "Male",
-      "email": "smarlowd@typepad.com",
-      "phone": "5228817437",
-      "address": "081 Quincy Center",
-      "city": "Bankim",
-      "country": "Cameroon",
-      "avatar": "https://robohash.org/eligendideseruntconsequatur.png?size=50x50&set=set1"
-    },
-    {
-      "id": 15,
-      "firstname": "Sallee",
-      "lastname": "Lamprey",
-      "gender": "Female",
-      "email": "slampreye@ihg.com",
-      "phone": "2979710095",
-      "address": "5 Fisk Terrace",
-      "city": "Almaguer",
-      "country": "Colombia",
-      "avatar": "https://robohash.org/dolorumveniamomnis.png?size=50x50&set=set1"
-    },
-    {
-      "id": 16,
-      "firstname": "Arny",
-      "lastname": "Bransgrove",
-      "gender": "Male",
-      "email": "abransgrovef@wsj.com",
-      "phone": "6887654227",
-      "address": "708 Cody Park",
-      "city": "Paita",
-      "country": "Peru",
-      "avatar": "https://robohash.org/etnobisvoluptatibus.png?size=50x50&set=set1"
-    },
-    {
-      "id": 17,
-      "firstname": "Dominga",
-      "lastname": "Scading",
-      "gender": "Female",
-      "email": "dscadingg@virginia.edu",
-      "phone": "1185636040",
-      "address": "796 Anhalt Plaza",
-      "city": "Norton",
-      "country": "Zimbabwe",
-      "avatar": "https://robohash.org/officiavoluptatematque.png?size=50x50&set=set1"
-    },
-    {
-      "id": 18,
-      "firstname": "Laverne",
-      "lastname": "Chiechio",
-      "gender": "Female",
-      "email": "lchiechioh@squarespace.com",
-      "phone": "8456902731",
-      "address": "810 Welch Circle",
-      "city": "Krasnomayskiy",
-      "country": "Russia",
-      "avatar": "https://robohash.org/laborevelitnon.png?size=50x50&set=set1"
-    },
-    {
-      "id": 19,
-      "firstname": "Tisha",
-      "lastname": "Haugen",
-      "gender": "Female",
-      "email": "thaugeni@bing.com",
-      "phone": "9405241192",
-      "address": "26046 Hayes Junction",
-      "city": "Andalucía",
-      "country": "Colombia",
-      "avatar": "https://robohash.org/molestiasnonet.png?size=50x50&set=set1"
-    },
-    {
-      "id": 20,
-      "firstname": "Zenia",
-      "lastname": "Stritton",
-      "gender": "Female",
-      "email": "zstrittonj@rambler.ru",
-      "phone": "8035693859",
-      "address": "36361 Calypso Point",
-      "city": "Alikalia",
-      "country": "Sierra Leone",
-      "avatar": "https://robohash.org/perferendisametquia.png?size=50x50&set=set1"
-    },
-    {
       "id": 22,
       "firstname": "Chrissy",
       "lastname": "Note",
@@ -107,30 +23,6 @@
       "city": "Klina",
       "country": "Kosovo",
       "avatar": "https://robohash.org/nemotemporeofficiis.png?size=50x50&set=set1"
-    },
-    {
-      "id": 24,
-      "firstname": "Somerset",
-      "lastname": "Blatchford",
-      "gender": "Male",
-      "email": "sblatchfordn@nyu.edu",
-      "phone": "7949453204",
-      "address": "13342 Sunbrook Way",
-      "city": "Agboville",
-      "country": "Ivory Coast",
-      "avatar": "https://robohash.org/utnecessitatibusvero.png?size=50x50&set=set1"
-    },
-    {
-      "id": 25,
-      "firstname": "Cori",
-      "lastname": "Pickerin",
-      "gender": "Male",
-      "email": "cpickerino@wordpress.com",
-      "phone": "5295991028",
-      "address": "6 Spaight Drive",
-      "city": "Moss",
-      "country": "Norway",
-      "avatar": "https://robohash.org/isteutperferendis.png?size=50x50&set=set1"
     },
     {
       "id": 26,
@@ -11819,6 +11711,14 @@
       "city": "Arnhem",
       "country": "Netherlands",
       "avatar": "https://robohash.org/recusandaequialiquam.png?size=50x50&set=set1"
+    },
+    {
+      "gender": "Male",
+      "firstname": "Vinod",
+      "lastname": "Kumar",
+      "email": "vinod@vinod.co",
+      "phone": "9731424784",
+      "id": 1001
     }
   ]
 }
