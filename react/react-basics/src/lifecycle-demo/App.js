@@ -8,9 +8,6 @@ const images = [
   'https://cdn.pixabay.com/photo/2016/11/10/08/15/aircraft-1813731_1280.jpg',
 ];
 
-const imgPath =
-  'https://cdn.pixabay.com/photo/2012/10/26/01/34/aircraft-63028_1280.jpg';
-
 export default class App extends Component {
   state = { isChecked: true, currentImageIndex: 0, timeoutId: undefined };
 

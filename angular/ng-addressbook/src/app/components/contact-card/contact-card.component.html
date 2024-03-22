@@ -1,0 +1,21 @@
+<div class="card">
+  <div>
+    <h5
+      (click)="deleteThisContact()"
+      class="btn btn-link bi bi-x-circle-fill text-danger float-end"
+    ></h5>
+  </div>
+  <img
+    [routerLink]="['/contact-details', contact.id]"
+    [src]="contact.avatar"
+    class="card-img-top"
+    [alt]="contact | fullname"
+    [title]="contact | fullname"
+  />
+  <div [routerLink]="['/contact-details', contact.id]" class="card-body">
+    <h5 class="card-title">{{ contact | fullname }}</h5>
+    <p class="card-text">
+      {{ contact.email }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<button
+  [disabled]="currentPageNum === 1"
+  (click)="handleClickPrevious()"
+  class="btn btn-primary me-3 my-3"
+>
+  Previous
+</button>
+<button (click)="handleClickNext()" class="btn btn-primary my-3 float-end">
+  Next
+</button>
+<div class="row">
+  <div class="col-4" *ngFor="let c of contacts">
+    <app-contact-card (deleted)="loadData()" [contact]="c"></app-contact-card>
+  </div>
+</div>

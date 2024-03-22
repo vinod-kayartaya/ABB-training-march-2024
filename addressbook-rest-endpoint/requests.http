@@ -1,0 +1,20 @@
+http://localhost:5000/contacts/
+
+###
+
+POST /contacts HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "firstname": "Vinod",
+    "lastname": "Kumar",
+    "gender": "Male",
+    "address": "1st cross 1st main ISRO lyt",
+    "city": "Bangalore",
+    "country": "India",
+    "phone": "9731424784",
+    "email": "vinod@vinod.co",
+    "avatar": "https://avatars.githubusercontent.com/u/109946821?v=4"
+}
